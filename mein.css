@@ -33,19 +33,27 @@ header {
 .navigation_order {
   width: 20%;
   padding-top: 20px;
-
 }
 
 .order_background {
   width: 45%;
   margin-left: 55%;
   text-align: center;
-  color: white;
+}
+
+.order_background button {
+  padding: 10px;
   background-color: #009bcb;
 }
 
-.order_background p {
-  padding: 5px;
+.order_background button a {
+  font-weight: bolder;
+  color: white;
+}
+
+.order_background button a:hover {
+  color: green;
+  text-decoration: none;
 }
 
 .navigation_order a {
@@ -83,14 +91,19 @@ header {
   font-weight: bold;
 }
 
-.promo_button {
-  width: 30%;
-  height: 10%;
-  padding: 3px 6px;
-  text-align: center;
+.promo_button button {
   border: 2px solid #009ccc;
-  color: #009bcb;
+  background-color: white;
+  padding: 10px 20px;
+}
 
+.promo_button button a {
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.promo_button button a:hover {
+  color: green;
 }
 
 .promo_picture {
@@ -99,9 +112,13 @@ header {
 }
 
 .section_cool-3 {
-  display: flex;
   background-color: #f8f7f7;
-  height: 30%;
+}
+
+.section_position_center {
+  display: flex;
+  margin-left: 190px;
+  margin-right: 190px;
 }
 
 .col-3 {
@@ -140,78 +157,288 @@ header {
 .article_picture_row {
   background-color: #fcfdfd;
   display: flex;
-  flex-direction: row;
-  margin-left: -15px;
-  margin-right: -15px;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
-.col-6 {
-  max-width: 50%;
-  z-index: 1;
+.diplom_picture {
+  background-image: url(Diplom.png);
+  width: 525px;
+  height: 150px;
+  background-repeat: no-repeat;
+  transition: 1s;
+  position: relative;
 }
 
-.col-6_a {
-  height: 159px;
-  padding-top: 64px;
-  padding-bottom: 67px;
-  z-index: 2;
-  text-align: center;
-  margin-top: -150px;
+.spravki_picture {
+  background-image: url(Spravki.png);
+  width: 525px;
+  height: 150px;
+  background-repeat: no-repeat;
+  transition: 1s;
+  position: relative;
 }
 
-.col-6_a a {
+.svidetelstva_picture {
+  background-image: url(Svidetelstva.png);
+  width: 525px;
+  height: 150px;
+  background-repeat: no-repeat;
+  transition: 1s;
+  position: relative;
+}
+
+.attestatu_picture {
+  background-image: url(Attestatu.png);
+  width: 525px;
+  height: 150px;
+  background-repeat: no-repeat;
+  transition: 1s;
+  position: relative;
+}
+
+.diplom_picture:hover {
+  transform: scale(1.1);
+}
+
+.spravki_picture:hover {
+  transform: scale(1.1);
+}
+
+.svidetelstva_picture:hover {
+  transform: scale(1.1);
+}
+
+.attestatu_picture:hover {
+  transform: scale(1.1);
+}
+
+.diplom_picture a {
   color: white;
-  font-weight: bold;
   font-size: x-large;
-  z-index: 3;
+  font-weight: bolder;
+  position: absolute;
+  top: 40%;
+  left: 40%;
 }
 
-.col-6_a a:hover {
+.diplom_picture a:hover {
   text-decoration: none;
   color: yellow;
 }
 
-.scale {
-  transition: 1s;
+.spravki_picture a {
+  color: white;
+  font-size: x-large;
+  font-weight: bolder;
+  position: absolute;
+  top: 40%;
+  left: 40%;
 }
 
-.scale:hover {
-  transform: scale(1.1);
+.spravki_picture a:hover {
+  text-decoration: none;
+  color: yellow;
 }
 
-
-
-.section_conteiner {
-  background-color: #f8f7f7;
-  display: flex;
+.svidetelstva_picture a {
+  color: white;
+  font-size: x-large;
+  font-weight: bolder;
+  position: absolute;
+  top: 40%;
+  left: 30%;
 }
 
-.end_position {
-  text-align: right;
+.svidetelstva_picture a:hover {
+  text-decoration: none;
+  color: yellow;
 }
 
-.col-2 {
+.attestatu_picture a {
+  color: white;
+  font-size: x-large;
+  font-weight: bolder;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+.attestatu_picture a:hover {
+  text-decoration: none;
+  color: yellow;
+}
+
+#slider {
+  /*положение слайдера*/
+  position: relative;
+  text-align: center;
+  top: 10px;
+}
+
+#slider {
+  /*центровка слайдера*/
+  margin: 0 auto;
+}
+
+#slides article {
+  /*все изображения справа друг от доруга*/
   width: 20%;
-  background-color: #f8f7f7;
-  padding-top: 20%;
+  float: left;
 }
 
-.section_conteiner_center {
+.article button {
+  background-color: #18a3dd;
+}
+
+.article button a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+#slides .image {
+  /*устанавливает общий размер блока с изображениями*/
+  width: 500%;
+}
+
+#overflow {
+  /*сркывает все, что находится за пределами этого блока*/
+  width: 100%;
+  overflow: hidden;
+}
+
+article img {
+  /*размер изображений слайдера*/
   width: 60%;
 }
 
-.section_conteiner_center h2 {
+#desktop:checked~#slider {
+  /*размер всего слайдера*/
+  max-width: 960px;
+  /*максимальнная длинна*/
+}
+
+/*настройка переключения и положения для левой стрелки*/
+/*если свич1-5 активны, то идет обращение к лейблу из блока с id контролс*/
+#switch1:checked~#controls label:nth-child(2),
+#switch2:checked~#controls label:nth-child(1),
+#switch3:checked~#controls label:nth-child(2),
+#switch4:checked~#controls label:nth-child(3),
+#switch5:checked~#controls label:nth-child(4) {
+  background: url('left.png') no-repeat;
+  /*заливка фона картинкой без повторений*/
+  float: left;
+  margin: 0 0 0 -84px;
+  /*сдвиг влево*/
+  display: block;
+  height: 68px;
+  width: 68px;
+}
+
+/*настройка переключения и положения для правой стрелки*/
+#switch1:checked~#controls label:nth-child(2),
+#switch2:checked~#controls label:nth-child(3),
+#switch3:checked~#controls label:nth-child(4),
+#switch4:checked~#controls label:nth-child(5),
+#switch5:checked~#controls label:nth-child(1) {
+  background: url('right.png') no-repeat;
+  /*заливка фона картинкой без повторений*/
+  float: right;
+  margin: 0 -84px 0 0;
+  /*сдвиг вправо*/
+  display: block;
+  height: 68px;
+  width: 68px;
+}
+
+label,
+a {
+  /*при наведении на стрелки или переключатели - курсор изменится*/
+  cursor: pointer;
+}
+
+.all input {
+  /*скрывает стандартные инпуты (чекбоксы) на странице*/
+  display: none;
+}
+
+/*позиция изображения при активации переключателя*/
+#switch1:checked~#slides .image {
+  margin-left: 0;
+}
+
+#switch2:checked~#slides .image {
+  margin-left: -100%;
+}
+
+#switch3:checked~#slides .image {
+  margin-left: -200%;
+}
+
+#switch4:checked~#slides .image {
+  margin-left: -300%;
+}
+
+#switch5:checked~#slides .image {
+  margin-left: -400%;
+}
+
+#controls {
+  /*положение блока всех управляющих элементов*/
+  margin: -25% 0 0 0;
+  width: 100%;
+  height: 50px;
+}
+
+#active label {
+  /*стиль отдельного переключателя*/
+  border-radius: 10px;
+  /*скругление углов*/
+  display: inline-block;
+  /*расположение в строку*/
+  width: 15px;
+  height: 15px;
+  background: #bbb;
+}
+
+#active {
+  /*расположение блока с переключателями*/
+  margin: 23% 0 0;
   text-align: center;
 }
 
-.section_conteiner_center button {
-  background-color: #00afe5;
-  margin-left: 40%;
+#active label:hover {
+  /*поведение чекбокса при наведении*/
+  background: #76c8ff;
+  border-color: #777 !important;
+  /*выполнение в любом случае*/
 }
 
-.section_conteiner_center button a {
-  text-decoration: none;
-  color: white;
+/*цвет активного лейбла при активации чекбокса*/
+#switch1:checked~#active label:nth-child(1),
+#switch2:checked~#active label:nth-child(2),
+#switch3:checked~#active label:nth-child(3),
+#switch4:checked~#active label:nth-child(4),
+#switch5:checked~#active label:nth-child(5) {
+  background: #18a3dd;
+  border-color: #18a3dd !important;
+}
+
+#slides .image {
+  /*анимация пролистывания изображений*/
+  transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#controls label:hover {
+  /*прозрачность стрелок при наведении*/
+  opacity: 0.6;
+}
+
+#controls label {
+  /*прозрачность стрелок при отводе курсора*/
+  transition: opacity 0.2s ease-out;
 }
 
 .text_document h3 {
@@ -227,11 +454,9 @@ footer {
   color: #71cbe7;
 }
 
-
 .section_conteiner_center button:hover {
   background-color: tomato;
 }
-
 
 @media screen and (min-width: 1600px) {
   .promo {
